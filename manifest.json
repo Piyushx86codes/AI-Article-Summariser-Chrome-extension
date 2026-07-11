@@ -1,12 +1,27 @@
 {
     "manifest_version":3 ,
     "name":"AI summariser for web Articles",
-    "version":1.0,
-    "permission":["scripting","activeTab","storage"],
+    "version":"1.0",
+    "permissions":["scripting","activeTab","storage"],
     "action":{
         "default_popup":"popup.html",
-        "default_icon":"icon32.png",
-        ""
+        "default_icon":"icon32.png"
+    },
 
-    }
+
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+     
+
+    "background":{
+        "service_worker":"background.js"
+    },
+
+    "options_page":"options.html",
+    "host_permissions":["<all_urls>"]
+
 }
