@@ -1,0 +1,12 @@
+{
+    "manifest_version":3 ,
+    "name":"AI summariser for web Articles",
+    "version":1.0,
+    "permission":["scripting","activeTab","storage"],
+    "action":{
+        "default_popup":"popup.html",
+        "default_icon":"icon32.png",
+        ""
+
+    }
+}
